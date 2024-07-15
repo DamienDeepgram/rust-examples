@@ -1,0 +1,18 @@
+[package]
+name = "deepgram_examples"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+
+[[bin]]
+name = "speech_to_text"
+path = "src/speech_to_text.rs"
+
+[[bin]]
+name = "text_to_speech"
+path = "src/text_to_speech.rs"
